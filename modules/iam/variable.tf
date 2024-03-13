@@ -12,3 +12,9 @@ variable "bucket_name" {
   type    = string
   default = "test_bucket_980"
 }
+
+variable "iam_role_name" {
+  type = string
+  default = "IAMRoleForEC2"
+  
+}

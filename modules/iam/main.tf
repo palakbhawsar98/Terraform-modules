@@ -40,7 +40,7 @@ resource "aws_iam_user_policy_attachment" "policy_attach" {
 
 # Allow EC2 instance to assume this role
 resource "aws_iam_role" "role_to_access_s3" {
-  name = "IAMRoleForEC2"
+  name = var.iam_role_name
   assume_role_policy = jsonencode({
 	Version = "2012-10-17"
 	Statement = [{
